@@ -17,7 +17,7 @@
 *.out
 *.synctex.gz
 *.toc
-
+**/.DS_Store
 # Bỏ qua luôn thư mục cấu hình của VS Code (tuỳ chọn)
 .vscode/
 
