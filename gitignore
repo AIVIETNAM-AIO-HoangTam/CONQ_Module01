@@ -1,0 +1,25 @@
+# Bỏ qua các file rác của trình biên dịch LaTeX
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
+
+# Bỏ qua luôn thư mục cấu hình của VS Code (tuỳ chọn)
+.vscode/
+
+# Nếu bạn không muốn đẩy file PDF lên (chỉ giữ code) thì bỏ comment dòng dưới
+# *.pdf

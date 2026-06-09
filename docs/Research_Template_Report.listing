@@ -1,0 +1,7 @@
+git clone https://github.com/username/research-project.git
+cd research-project
+pip install -r requirements.txt
+
+python src/preprocess.py
+python src/train.py --config configs/baseline.yaml
+python src/evaluate.py --checkpoint checkpoints/best_model.pt

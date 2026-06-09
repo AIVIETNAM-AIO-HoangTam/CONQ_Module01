@@ -1,0 +1,485 @@
+\documentclass[12pt]{ai_conquer2026}
+\addbibresource{references.bib}
+
+\title{%
+  \begin{center}
+        \Large {AI VIET NAM -- AI Conquer 2026}\\[.5ex]  
+        \Huge \textbf{Điền tên bài research (hướng Du học) vào đây}\\[.5ex]
+  \end{center}
+}
+
+
+% Author --------------------------------------------------------------------
+\posttitle{
+\author{
+\begin{minipage}{\textwidth}
+\centering
+{
+\vspace{-1.5em}
+Tên nhóm / Tên học viên
+}\
+\end{minipage}
+}
+}
+\date{}
+
+% Header --------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\href{https://www.facebook.com/aivietnam.edu.vn}{\textcolor{aivnGreen}{\bfseries AI VIET NAM (AI Conquer 2026)}}}
+\rhead{\href{https://aivietnam.edu.vn/}{\textcolor{aivnGreen}{\bfseries aivietnam.edu.vn}}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{1.0pt}
+\renewcommand{\headrule}{{\color{aivnGreen}\hrule width\headwidth height\headrulewidth \vskip-\headrulewidth}}
+
+\begin{document}
+\maketitle
+\vspace{-5.5em}
+\setlength{\epigraphwidth}{0.6\textwidth}
+
+\section{Tóm tắt nghiên cứu}
+
+Phần này tóm tắt ngắn gọn toàn bộ bài nghiên cứu. Người viết cần trình bày rõ bài toán nghiên cứu là gì, vì sao bài toán này quan trọng, phương pháp được đề xuất là gì, thí nghiệm được thực hiện như thế nào, kết quả chính đạt được ra sao, và đóng góp nổi bật của nghiên cứu là gì.
+
+Nội dung tóm tắt nên bao gồm:
+\begin{itemize}
+\item Bối cảnh hoặc vấn đề nghiên cứu trong lĩnh vực AI.
+\item Khoảng trống hoặc hạn chế của các nghiên cứu / phương pháp trước đó.
+\item Mục tiêu nghiên cứu của nhóm.
+\item Phương pháp, mô hình hoặc hướng tiếp cận chính.
+\item Dataset, benchmark hoặc môi trường thí nghiệm được sử dụng.
+\item Kết quả nổi bật so với baseline hoặc phương pháp so sánh.
+\item Đóng góp chính của nghiên cứu.
+\end{itemize}
+
+Đối với Research, phần này nên viết theo phong cách paper, ngắn gọn, rõ ràng và tập trung vào đóng góp nghiên cứu. Không nên viết quá nhiều về giao diện demo hoặc sản phẩm người dùng cuối như hướng đi làm.
+
+\newpage
+\setcounter{tocdepth}{2}
+\tableofcontents
+\thispagestyle{fancy}
+
+\newpage
+\section{Giới thiệu (Introduction)}
+
+Phần này giới thiệu bối cảnh nghiên cứu và lý do vì sao đề tài này đáng được quan tâm. Người viết cần đặt project vào một lĩnh vực AI cụ thể như Computer Vision, Natural Language Processing, Speech Processing, Robotics, AI in Education, Healthcare AI, Multimodal AI, hoặc Generative AI.
+
+Nội dung nên trình bày:
+
+\begin{itemize}
+\item Lĩnh vực nghiên cứu mà đề tài thuộc về.
+\item Bài toán AI chính mà nghiên cứu muốn giải quyết.
+\item Vì sao bài toán này quan trọng về mặt học thuật hoặc ứng dụng.
+\item Những khó khăn hiện tại của bài toán.
+\item Khoảng trống hoặc hạn chế còn tồn tại trong các phương pháp hiện có.
+\item Mục tiêu nghiên cứu của nhóm.
+\item Đóng góp chính của nghiên cứu.
+\end{itemize}
+
+Ví dụ, nếu đề tài thuộc Computer Vision, phần giới thiệu cần nói rõ bài toán là classification, detection, segmentation, image retrieval hay image generation. Nếu đề tài thuộc NLP, cần làm rõ bài toán là text classification, question answering, summarization, retrieval-augmented generation, machine translation hoặc sentiment analysis.
+
+Phần cuối của mục giới thiệu nên nêu rõ các đóng góp chính. Có thể viết theo dạng:
+
+\begin{itemize}
+\item Chúng tôi xây dựng một baseline rõ ràng cho bài toán \textbf{[tên bài toán]}.
+\item Chúng tôi đề xuất hoặc thử nghiệm phương pháp \textbf{[tên phương pháp]} nhằm cải thiện \textbf{[metric / vấn đề]}.
+\item Chúng tôi thực hiện thí nghiệm trên \textbf{[dataset / benchmark]} và so sánh với các phương pháp liên quan.
+\item Chúng tôi phân tích lỗi, hạn chế và đề xuất hướng phát triển cho nghiên cứu tiếp theo.
+\end{itemize}
+
+\section{Bài toán nghiên cứu (Research Problem)}
+
+Phần này định nghĩa rõ bài toán nghiên cứu dưới. Người viết cần mô tả chính xác input, output, mục tiêu tối ưu và tiêu chí đánh giá của bài toán.
+
+Nội dung nên bao gồm:
+
+\begin{itemize}
+\item \textbf{Tên bài toán:} Ví dụ image classification, object detection, semantic segmentation, text classification, retrieval, question answering, recommendation hoặc generation.
+\item \textbf{Input:} Dữ liệu đầu vào của mô hình, ví dụ ảnh, văn bản, âm thanh, video, bảng dữ liệu, câu hỏi hoặc tài liệu.
+\item \textbf{Output:} Kết quả mô hình cần tạo ra, ví dụ nhãn, xác suất, bounding box, mask, embedding, câu trả lời, văn bản sinh ra hoặc danh sách truy xuất.
+\item \textbf{Mục tiêu nghiên cứu:} Mô hình cần cải thiện điều gì, ví dụ độ chính xác, khả năng tổng quát hóa, tốc độ suy luận, khả năng giải thích hoặc hiệu quả dữ liệu.
+\item \textbf{Metric đánh giá:} Accuracy, F1-score, mAP, IoU, BLEU, ROUGE, Recall@K, MRR, latency hoặc human evaluation.
+\end{itemize}
+
+Nếu nghiên cứu có giả thuyết, nên trình bày rõ giả thuyết nghiên cứu.
+
+\begin{aivncodebox}[Ví dụ:]
+Giả thuyết của nghiên cứu là việc sử dụng pretrained model kết hợp với data augmentation có thể cải thiện khả năng phân loại ảnh trong điều kiện dữ liệu huấn luyện còn hạn chế.
+\end{aivncodebox}
+
+Nếu nghiên cứu không đề xuất phương pháp hoàn toàn mới, người viết vẫn có thể định nghĩa mục tiêu là kiểm chứng, so sánh, tái lập, mở rộng hoặc phân tích một phương pháp AI đã có trong một bối cảnh dữ liệu cụ thể.
+
+\section{Tổng quan nghiên cứu liên quan (Related Work)}
+
+Phần này trình bày các nghiên cứu, mô hình hoặc phương pháp trước đây có liên quan đến đề tài. Đây là phần quan trọng trong Research vì nó cho thấy nhóm hiểu bối cảnh học thuật của bài toán, biết các phương pháp đã có, và xác định được khoảng trống mà nghiên cứu hiện tại muốn giải quyết.
+
+Người viết không nên chỉ liệt kê từng paper một cách rời rạc. Thay vào đó, nên tổng hợp các nghiên cứu theo nhóm chủ đề, so sánh điểm mạnh, điểm yếu và rút ra vấn đề còn tồn tại.
+
+Nội dung nên bao gồm:
+
+\begin{itemize}
+    \item Các phương pháp truyền thống đã được sử dụng cho bài toán.
+    \item Các mô hình Machine Learning hoặc Deep Learning phổ biến.
+    \item Các pretrained models, foundation models hoặc architecture liên quan.
+    \item Các nghiên cứu sử dụng cùng dataset, benchmark hoặc bối cảnh tương tự.
+    \item Kết quả chính mà các nghiên cứu trước đã đạt được.
+    \item Hạn chế còn tồn tại trong các phương pháp trước.
+    \item Khoảng trống nghiên cứu mà project hiện tại muốn tập trung giải quyết.
+\end{itemize}
+
+Khi viết phần này, người viết nên trả lời các câu hỏi sau:
+
+\begin{itemize}
+    \item Các nghiên cứu trước đã giải quyết bài toán này theo hướng nào?
+    \item Phương pháp nào thường cho kết quả tốt?
+    \item Những hạn chế nào vẫn còn tồn tại?
+    \item Dataset, điều kiện thí nghiệm hoặc khía cạnh nào chưa được phân tích đầy đủ?
+    \item Nghiên cứu của nhóm sẽ kế thừa điểm gì từ các nghiên cứu trước?
+    \item Nghiên cứu của nhóm sẽ tập trung cải thiện, kiểm chứng hoặc phân tích điểm nào?
+\end{itemize}
+
+
+\begin{aivncodebox}[Ví dụ:]
+    
+Các nghiên cứu trước cho thấy pretrained models thường cải thiện hiệu quả trong các bài toán có ít dữ liệu. Tuy nhiên, nhiều phương pháp vẫn gặp khó khăn khi dữ liệu bị nhiễu, mất cân bằng class hoặc khác biệt so với dữ liệu huấn luyện ban đầu. Vì vậy, nghiên cứu này tập trung đánh giá tác động của tiền xử lý dữ liệu và fine-tuning strategy đối với hiệu quả mô hình trên dataset được chọn.
+\end{aivncodebox}
+
+Sau khi tổng quan các nghiên cứu liên quan, người viết cần nêu rõ khoảng trống nghiên cứu. Khoảng trống này có thể đến từ:
+
+\begin{itemize}
+    \item Chưa có nhiều nghiên cứu trên dataset hoặc bối cảnh mà nhóm lựa chọn.
+    \item Các nghiên cứu trước chưa so sánh đầy đủ giữa nhiều mô hình.
+    \item Một thành phần trong pipeline chưa được phân tích rõ.
+    \item Chưa có ablation study để đánh giá vai trò của từng thành phần.
+    \item Mô hình đạt kết quả tốt nhưng chưa phân tích lỗi chi tiết.
+    \item Dữ liệu có vấn đề như nhiễu, mất cân bằng class hoặc ít mẫu nhưng chưa được xử lý đầy đủ.
+\end{itemize}
+
+Từ khoảng trống trên, nhóm cần trình bày mục tiêu nghiên cứu. Ví dụ:
+
+\begin{itemize}
+    \item Xây dựng baseline rõ ràng cho bài toán \textbf{[tên bài toán]}.
+    \item So sánh các mô hình hoặc các cấu hình khác nhau trên \textbf{[dataset / benchmark]}.
+    \item Đánh giá ảnh hưởng của \textbf{[preprocessing / augmentation / fine-tuning / retrieval strategy / prompt design]} đến kết quả.
+    \item Thực hiện phân tích lỗi để hiểu mô hình gặp khó khăn trong những trường hợp nào.
+    \item Đề xuất hướng cải thiện cho các nghiên cứu tiếp theo.
+\end{itemize}
+
+Nếu phù hợp, người viết có thể nêu câu hỏi nghiên cứu ở cuối phần này:
+
+\begin{itemize}
+    \item \textbf{RQ1:} Phương pháp nào đạt kết quả tốt nhất trên dataset được chọn?
+    \item \textbf{RQ2:} Thành phần nào trong pipeline ảnh hưởng nhiều nhất đến hiệu quả mô hình?
+    \item \textbf{RQ3:} Mô hình thường gặp lỗi trong những trường hợp nào và nguyên nhân có thể là gì?
+\end{itemize}
+
+Phần này cần có trích dẫn tài liệu tham khảo bằng BibTeX. Các paper, dataset, model hoặc framework quan trọng nên được đưa vào file \texttt{references.bib}.
+```
+
+
+\section{Phương pháp nghiên cứu (Methodology)}
+
+Phần này mô tả phương pháp mà nhóm sử dụng để giải quyết bài toán nghiên cứu. Đối với Research, cần trình bày rõ baseline, phương pháp chính, pipeline thí nghiệm và lý do lựa chọn từng thành phần.
+
+Nội dung nên bao gồm:
+
+\begin{itemize}
+\item \textbf{Baseline:} Phương pháp đơn giản hoặc mô hình ban đầu dùng để so sánh.
+\item \textbf{Phương pháp chính:} Mô hình, thuật toán hoặc pipeline chính được sử dụng.
+\item \textbf{Cải tiến hoặc biến thể:} Nếu nhóm có thay đổi preprocessing, augmentation, architecture, loss function, prompt, retrieval strategy hoặc training setup.
+\item \textbf{Luồng xử lý:} Dữ liệu đi qua những bước nào trước khi tạo ra kết quả.
+\item \textbf{Lý do lựa chọn:} Vì sao phương pháp này phù hợp với bài toán.
+\end{itemize}
+
+\begin{aivncodebox}[Ví dụ:]
+Với bài toán Computer Vision, phần phương pháp có thể trình bày:
+
+\begin{itemize}
+\item Input image preprocessing.
+\item Data augmentation.
+\item CNN hoặc Vision Transformer backbone.
+\item Classification head.
+\item Loss function.
+\item Optimization strategy.
+\end{itemize}
+
+\end{aivncodebox}
+
+\begin{aivncodebox}[Ví dụ:]
+Với bài toán NLP hoặc RAG, phần phương pháp có thể trình bày:
+
+\begin{itemize}
+\item Document preprocessing.
+\item Chunking strategy.
+\item Embedding model.
+\item Vector retrieval.
+\item Reranking nếu có.
+\item LLM answer generation.
+\item Prompt design.
+\end{itemize}
+
+\end{aivncodebox}
+
+Có thể mô tả pipeline bằng hình vẽ, có thể xử dụng Canva, draw.io để vẽ pipeline, kiến trúc và xuất .pdf để hình ảnh khi phóng to được rõ nét:
+
+
+
+\section{Dữ liệu và thiết lập thí nghiệm (Experiments)}
+
+Phần này mô tả dataset, cách chia dữ liệu, môi trường thí nghiệm và các cấu hình huấn luyện. Đây là phần giúp người đọc có thể hiểu và tái lập thí nghiệm của nhóm.
+
+\subsection{Dataset}
+
+Người viết cần mô tả:
+
+\begin{itemize}
+\item Tên dataset.
+\item Nguồn dữ liệu.
+\item Kích thước dataset.
+\item Số lượng class hoặc nhãn nếu có.
+\item Định dạng dữ liệu.
+\item Ví dụ mẫu dữ liệu.
+\item Các vấn đề của dataset như nhiễu, mất cân bằng, thiếu nhãn hoặc sai nhãn.
+\end{itemize}
+
+Nếu dataset được tự thu thập, cần mô tả quy trình thu thập và cách kiểm soát chất lượng dữ liệu. Nếu dùng dataset công khai, cần ghi rõ nguồn và trích dẫn phù hợp.
+
+\subsection{Chia dữ liệu}
+
+Người viết cần trình bày cách chia dữ liệu:
+
+\begin{itemize}
+\item Train set dùng để huấn luyện mô hình.
+\item Validation set dùng để chọn mô hình hoặc điều chỉnh tham số.
+\item Test set dùng để đánh giá cuối cùng.
+\end{itemize}
+
+Cần đảm bảo không có data leakage giữa các tập dữ liệu. Nếu có cross-validation, cần mô tả rõ số folds và cách thực hiện.
+
+\subsection{Thiết lập huấn luyện}
+
+Nếu nghiên cứu có huấn luyện hoặc fine-tune mô hình, cần nêu rõ:
+
+\begin{itemize}
+\item Model architecture hoặc pretrained model.
+\item Input size hoặc sequence length.
+\item Batch size.
+\item Learning rate.
+\item Optimizer.
+\item Loss function.
+\item Number of epochs.
+\item Hardware sử dụng.
+\item Random seed nếu có.
+\end{itemize}
+
+\subsection{Thiết lập đánh giá}
+
+Người viết cần mô tả cách đánh giá:
+
+\begin{itemize}
+\item Metric chính.
+\item Metric phụ.
+\item Baseline hoặc phương pháp so sánh.
+\item Số lần chạy thí nghiệm.
+\item Cách chọn kết quả cuối cùng.
+\end{itemize}
+
+Phần này cần viết đủ rõ để người đọc hiểu thí nghiệm được thực hiện một cách có hệ thống, không chỉ là chạy thử một lần rồi ghi kết quả.
+
+\section{Kết quả thí nghiệm (Results)}
+
+Phần này trình bày kết quả chính của nghiên cứu. Người viết nên đưa kết quả theo cách rõ ràng, có so sánh với baseline hoặc các phương pháp khác nếu có.
+
+Nội dung nên bao gồm:
+
+\begin{itemize}
+\item Kết quả của baseline.
+\item Kết quả của phương pháp chính.
+\item Kết quả của các biến thể hoặc cấu hình khác nhau.
+\item So sánh định lượng bằng metric phù hợp.
+\item Nhận xét ngắn gọn về kết quả.
+\end{itemize}
+
+
+\begin{aivncodebox}[Ví dụ:]
+Kết quả cho thấy mô hình pretrained đạt hiệu quả cao hơn baseline truyền thống trên cả Accuracy và F1-score. Tuy nhiên, mức cải thiện không đồng đều giữa các class, đặc biệt ở những class có ít dữ liệu huấn luyện.
+\end{aivncodebox}
+
+Nếu có bảng hoặc biểu đồ, nên đặt ở phần này để người đọc dễ theo dõi. Kết quả cần được trình bày trung thực, không chỉ chọn những con số tốt nhất mà bỏ qua các trường hợp thất bại.
+
+Nếu nghiên cứu có nhiều lần chạy, nên báo cáo trung bình và độ lệch chuẩn nếu có thể. Nếu chỉ chạy một lần do hạn chế tài nguyên, cần nói rõ điều này trong phần hạn chế.
+
+\section{Ablation Study và phân tích bổ sung}
+
+Phần này dùng để phân tích ảnh hưởng của từng thành phần trong phương pháp. Đây là phần giúp bài nghiên cứu có chiều sâu hơn và thể hiện rằng nhóm hiểu vì sao mô hình hoạt động tốt hoặc chưa tốt.
+
+Ablation study có thể trả lời các câu hỏi như:
+
+\begin{itemize}
+\item Nếu bỏ data augmentation thì kết quả thay đổi như thế nào?
+\item Nếu thay đổi backbone model thì hiệu quả ra sao?
+\item Nếu thay đổi learning rate, batch size hoặc optimizer thì kết quả thế nào?
+\item Nếu thay đổi chunk size trong RAG thì retrieval có tốt hơn không?
+\item Nếu không dùng pretrained model thì kết quả giảm bao nhiêu?
+\item Nếu bỏ một module trong pipeline thì hệ thống bị ảnh hưởng như thế nào?
+\end{itemize}
+
+Nếu project không đủ thời gian để thực hiện ablation study đầy đủ, nhóm có thể trình bày một phân tích bổ sung nhỏ, ví dụ so sánh hai cấu hình quan trọng nhất hoặc phân tích một vài trường hợp điển hình.
+
+
+\begin{aivncodebox}[Ví dụ:]
+Khi loại bỏ data augmentation, F1-score giảm rõ rệt trên các class có ít dữ liệu. Điều này cho thấy data augmentation đóng vai trò quan trọng trong việc cải thiện khả năng tổng quát hóa của mô hình.
+\end{aivncodebox}
+
+\section{Thảo luận (Discussion)}
+
+Phần này giải thích ý nghĩa của kết quả thí nghiệm. Người viết không chỉ nêu con số, mà cần phân tích vì sao kết quả như vậy và kết quả đó nói gì về bài toán nghiên cứu.
+
+Nội dung nên bao gồm:
+
+\begin{itemize}
+\item Phương pháp nào hoạt động tốt nhất và vì sao.
+\item Kết quả có phù hợp với giả thuyết ban đầu không.
+\item Kết quả có giống hoặc khác với các nghiên cứu trước không.
+\item Mô hình hoạt động tốt trong điều kiện nào.
+\item Mô hình hoạt động kém trong điều kiện nào.
+\item Những phát hiện quan trọng rút ra từ thí nghiệm.
+\end{itemize}
+
+\begin{aivncodebox}[Ví dụ:]
+Kết quả cho thấy pretrained models có lợi thế rõ ràng trong bối cảnh dữ liệu hạn chế. Tuy nhiên, mô hình vẫn gặp khó khăn với các mẫu có nhiễu hoặc các class có đặc điểm tương tự nhau. Điều này cho thấy việc cải thiện chất lượng dữ liệu và phân tích class imbalance có thể quan trọng không kém việc thay đổi kiến trúc mô hình.
+\end{aivncodebox}
+
+Phần thảo luận nên liên kết lại với khoảng trống nghiên cứu đã nêu ở phần trước. Nếu kết quả không tốt như kỳ vọng, người viết vẫn cần phân tích trung thực thay vì bỏ qua.
+
+\section{Phân tích lỗi và hạn chế}
+
+Phần này trình bày các lỗi thường gặp của mô hình và các hạn chế của nghiên cứu. Đây là phần rất quan trọng trong một paper vì nó cho thấy nhóm hiểu rõ giới hạn của kết quả.
+
+Người viết nên trình bày:
+
+\begin{itemize}
+\item Những loại mẫu mà mô hình dự đoán sai nhiều nhất.
+\item Các class hoặc trường hợp dễ bị nhầm lẫn.
+\item Nguyên nhân có thể dẫn đến lỗi.
+\item Hạn chế của dataset.
+\item Hạn chế của phương pháp.
+\item Hạn chế của thiết lập thí nghiệm.
+\item Hạn chế về tài nguyên tính toán hoặc thời gian.
+\end{itemize}
+
+\begin{aivncodebox}[Ví dụ:]
+Mô hình thường nhầm lẫn giữa hai class có đặc điểm hình ảnh gần giống nhau. Ngoài ra, một số ảnh trong tập dữ liệu có chất lượng thấp, thiếu sáng hoặc bị che khuất, khiến mô hình khó học được đặc trưng ổn định.
+\end{aivncodebox}
+
+\begin{aivncodebox}[Ví dụ:]
+Với bài toán RAG hoặc chatbot, phần này có thể phân tích:
+
+\begin{itemize}
+\item Truy xuất sai tài liệu.
+\item Câu trả lời đúng một phần nhưng thiếu chi tiết.
+\item Câu trả lời không bám sát nguồn.
+\item Lỗi do chunking chưa phù hợp.
+\item Lỗi do embedding model chưa đủ tốt.
+\end{itemize}
+\end{aivncodebox}
+
+\section{Tái lập kết quả và mã nguồn (Replicate the results)}
+
+Phần này mô tả cách người đọc có thể tái lập thí nghiệm. Đây là phần quan trọng đối với Research vì một nghiên cứu tốt cần có khả năng kiểm chứng lại.
+
+Người viết nên trình bày:
+
+\begin{itemize}
+\item Link GitHub repository.
+\item Cấu trúc mã nguồn chính.
+\item Cách cài đặt môi trường.
+\item Cách tải hoặc chuẩn bị dữ liệu.
+\item Cách chạy training.
+\item Cách chạy evaluation.
+\item Cách tạo lại bảng kết quả hoặc biểu đồ.
+\end{itemize}
+
+
+
+\begin{aivnoutputbox}[Ví dụ cấu trúc mã nguồn:]
+research-project/
+|-- data/
+|-- configs/
+|-- src/
+|   |-- preprocess.py
+|   |-- train.py
+|   |-- evaluate.py
+|   |-- ablation.py
+|-- notebooks/
+|-- results/
+|-- figures/
+|-- requirements.txt
+|-- README.md
+\end{aivnoutputbox}
+
+
+
+\begin{aivnoutputbox}[Ví dụ về lệnh chạy:]
+git clone https://github.com/username/research-project.git
+cd research-project
+pip install -r requirements.txt
+
+python src/preprocess.py
+python src/train.py --config configs/baseline.yaml
+python src/evaluate.py --checkpoint checkpoints/best_model.pt
+\end{aivnoutputbox}
+
+Nếu không thể công khai dataset hoặc checkpoint, người viết cần ghi rõ lý do và mô tả cách thay thế để người đọc vẫn hiểu được quy trình thí nghiệm.
+
+\section{Kết luận và hướng nghiên cứu tiếp theo (Conclusion and Future Work)}
+
+Phần này tổng kết lại toàn bộ bài nghiên cứu. Người viết cần nhắc lại bài toán, phương pháp, kết quả chính, đóng góp và hướng phát triển tiếp theo.
+
+Nội dung kết luận nên trả lời các câu hỏi:
+
+\begin{itemize}
+\item Nghiên cứu này giải quyết bài toán nào?
+\item Nhóm đã sử dụng phương pháp hoặc mô hình gì?
+\item Kết quả chính đạt được là gì?
+\item Kết quả này cho thấy điều gì?
+\item Đóng góp chính của nghiên cứu là gì?
+\item Nghiên cứu còn hạn chế gì?
+\end{itemize}
+
+Phần hướng nghiên cứu tiếp theo có thể bao gồm:
+
+\begin{itemize}
+\item Thử nghiệm trên dataset lớn hơn hoặc đa dạng hơn.
+\item So sánh với nhiều mô hình mạnh hơn.
+\item Thực hiện ablation study đầy đủ hơn.
+\item Cải thiện preprocessing hoặc data augmentation.
+\item Tối ưu hyperparameters.
+\item Phân tích sâu hơn các lỗi của mô hình.
+\item Cải thiện tính giải thích của mô hình.
+\item Triển khai phương pháp trong bối cảnh thực tế.
+\end{itemize}
+
+Đối với Research, kết luận nên nhấn mạnh rằng project là một nghiên cứu có bài toán rõ ràng, có liên hệ với nghiên cứu trước, có thí nghiệm, có đánh giá, có phân tích và có hướng phát triển tiếp theo.
+
+\newpage
+\section{Tài liệu tham khảo}
+\label{section:references}
+\nocite{*}
+\vspace{-3.2em}
+\printbibliography
+
+\newpage
+\begin{appendices}
+\begin{enumerate}
+\item \textbf{AIVIETNAM:} Thông tin về AIVIETNAM có thể đọc thêm tại \href{https://aivietnam.edu.vn/}{đây}.
+\item \textbf{GitHub Repository:} Nhóm điền link GitHub repository của project tại đây.
+\item \textbf{Dataset:} Nhóm điền link dataset hoặc mô tả nguồn dữ liệu tại đây nếu có.
+\item \textbf{Model Checkpoint:} Nhóm điền link model checkpoint tại đây nếu có.
+\item \textbf{Experiment Logs:} Nhóm điền link log thí nghiệm, WandB, TensorBoard hoặc bảng kết quả tại đây nếu có.
+\item \textbf{Supplementary Results:} Nhóm có thể bổ sung bảng kết quả chi tiết, biểu đồ, confusion matrix, ví dụ dự đoán đúng/sai hoặc kết quả ablation tại đây.
+\item \textbf{Demo Video / Presentation:} Nhóm điền link video trình bày paper hoặc slide thuyết trình tại đây nếu có.
+\end{enumerate}
+\end{appendices}
+
+\end{document}
